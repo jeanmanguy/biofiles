@@ -60,7 +60,7 @@ show_gbFeature <- function(object, showInfo = TRUE, write_to_file = FALSE) {
   }
   
   loc_fmt <- paste0("%s%-16s%s")
-  qua_fmt <- paste0("%-16s%s%s = %s")
+  qua_fmt <- paste0("%-16s%s%s=%s")
   loc <- linebreak(as(location(object), "character"), width = width,
                    offset = 17 + ws, indent = 0, split = ",", FORCE = FALSE)
   loc_line <- sprintf(loc_fmt, dup(' ', ws), key(object), loc)
