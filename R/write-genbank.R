@@ -23,7 +23,7 @@ setMethod("write.GenBank", "gbFeatureTable",
     header(x)$write(file = file, append = append, sep = "")
   }
   
-  cat("FEATURES:            Location/Qualifiers:\n", file = file, append = TRUE)
+  cat("FEATURES             Location/Qualifiers \n", file = file, append = TRUE)
   f <- lapply(.features(x), show_gbFeature, write_to_file = TRUE)
   cat(paste0(f, collapse = "\n"), file = file, append = TRUE)
 
