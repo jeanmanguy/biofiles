@@ -47,9 +47,9 @@ setMethod("write.GenBank", "gbFeatureTable",
     s <- sprintf("%+9s %s", lineno, s)
     cat("\nORIGIN", file = file, sep = "\n", append = TRUE)
     cat(s, file = file, sep = "\n", append = TRUE)
-    cat("//", file = file, append = TRUE)
+    cat("//\n", file = file, append = TRUE)
   } else {
-    cat("\n//", file = file, append = TRUE)
+    cat("\n//\n", file = file, append = TRUE)
   }
   invisible()
 }
